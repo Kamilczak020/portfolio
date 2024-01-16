@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Italiana&display=swap');
+
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+html {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-block: 0;
+  margin-inline: 0;
+  font-weight: unset;
+  font-family: 'Apfelgrotezk', sans-serif;
+}
+
+h1 {
+  font-size: var(--font-size-xxxl);
+  line-height: var(--line-height-xxxl);
+}
+
+h2 {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-xxl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+h4 {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+}
+
+h5 {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+
+h6 {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+}
+
+:root {
+  --accent-purple: #2b324b;
+  --accent-cream: #f7c59f;
+  --gray-500: #767b91;
+  --gray-300: #c7ccdb;
+  --gray-100: #e1e5ee;
+  --border: #242424;
+  --bg: #000;
+
+  --spacing-xxl-double: 72px;
+  --spacing-xl-double: 54px;
+
+  --spacing-xl: 36px;
+  --spacing-l: 27px;
+  --spacing-m: 18px;
+  --spacing-s: 9px;
+  --spacing-xs: 4.5px;
+}

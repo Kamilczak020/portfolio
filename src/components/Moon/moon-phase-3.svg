@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#010101;}
+	.st1{fill:#F7C6A0;}
+</style>
+	<path class="st0" d="M24,14.2c6.8,0,13-2.4,17.8-6.3C37.4,3.1,31.1,0,24,0S10.6,3.1,6.2,7.9C11,11.9,17.2,14.2,24,14.2z"/>
+	<path class="st1" d="M24,14.2c-6.8,0-13-2.4-17.8-6.3C2.3,12.2,0,17.8,0,24c0,13.3,10.7,24,24,24s24-10.7,24-24
+		c0-6.2-2.3-11.8-6.2-16.1C37,11.9,30.8,14.2,24,14.2z"/>
+</svg>
