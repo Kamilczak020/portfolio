@@ -1,0 +1,35 @@
+.icon {
+  flex-shrink: 0;
+}
+
+.arrowUp {
+  transform: rotate(-180deg);
+}
+
+.arrowRight {
+  transform: rotate(-90deg);
+}
+
+.arrowLeft {
+  transform: rotate(90deg);
+}
+
+.small {
+  width: 16px;
+  height: 16px;
+}
+
+.medium {
+  width: 24px;
+  height: 24px;
+}
+
+.large {
+  width: 30px;
+  height: 30px;
+}
+
+.extraLarge {
+  width: 84px;
+  height: 84px;
+}

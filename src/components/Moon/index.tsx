@@ -14,7 +14,7 @@ type MoonPhase = (typeof phaseValues)[number];
 
 export type MoonProps = {
   phase: MoonPhase;
-  rotation: number;
+  rotation?: number;
   className?: string;
 };
 

@@ -1,14 +1,22 @@
-.moonSquare {
-  --size: 50px;
-  --rot-dif: calc(var(--size) / 2);
+.moonSquareWrapper {
+  --size: 150px;
+  --diagonal: calc(var(--size) * sqrt(2));
 
+  width: var(--diagonal);
+  height: var(--diagonal);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--size);
-  height: var(--size);
-  padding: var(--spacing-xl-double);
-  border: 2px solid var(--border);
-  transform-origin: center;
-  transform: translate(var(--rot-dif), var(--rot-dif)) rotate(45deg);
+
+  & .moonSquare {
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border);
+    transform-origin: center;
+    transform: rotate(45deg);
+  }
 }
+

@@ -1,20 +1,21 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { MoonSquare } from '@penumbra/components/MoonBar/MoonSquare';
-import { MoonCycle } from '@penumbra/components/Moon';
+import { MoonBarOverlay } from '@penumbra/components/MoonBar/MoonBarOverlay';
 import style from './style.module.scss';
 
 export function MoonBar(): JSX.Element {
-  const [cycle, setCycle] = useState<MoonCycle>(1);
+  const moonBarRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={style.moonBar}>
-      <MoonSquare squareClassName={style.square} phase={1} cycle={cycle} />
-      <MoonSquare squareClassName={style.square} phase={2} cycle={cycle} />
-      <MoonSquare squareClassName={style.square} phase={3} cycle={cycle} />
-      <MoonSquare squareClassName={style.square} phase={4} cycle={cycle} />
-      <MoonSquare squareClassName={style.square} phase={5} cycle={cycle} />
+    <div ref={moonBarRef} className={style.moonBar}>
+      <MoonSquare phase={1} wrapperClassName={style.wrapper} squareClassName={style.square} />
+      <MoonSquare phase={2} wrapperClassName={style.wrapper} />
+      <MoonSquare phase={3} wrapperClassName={style.wrapper} />
+      <MoonSquare phase={4} wrapperClassName={style.wrapper} />
+      <MoonSquare phase={5} wrapperClassName={style.wrapper} />
+      <MoonBarOverlay moonBarRef={moonBarRef} />
     </div>
   );
 }

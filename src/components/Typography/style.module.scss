@@ -1,0 +1,53 @@
+.weightBold {
+  font-weight: var(--font-weight-bold);
+}
+
+.weightSemibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.weightRegular {
+  font-weight: var(--font-weight-regular);
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+
+.lowerCase {
+  text-transform: lowercase;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lineHeightXxxl {
+  line-height: var(--line-height-xxxl);
+}
+
+.lineHeightXxl {
+  line-height: var(--line-height-xxl);
+}
+
+.lineHeightXl {
+  line-height: var(--line-height-xl);
+}
+
+.lineHeightL {
+  line-height: var(--line-height-l);
+}
+
+.lineHeightM {
+  line-height: var(--line-height-m);
+}
+
+.lineHeightS {
+  line-height: var(--line-height-s);
+}
+
+.lineHeightXs {
+  line-height: var(--line-height-xs);
+}

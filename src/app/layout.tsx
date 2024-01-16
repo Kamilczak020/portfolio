@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { MoonBar } from '@penumbra/components/MoonBar';
+import { TitleHeader } from '@penumbra/components/TitleHeader';
 import style from './layout.module.scss';
 import './globals.scss';
 
@@ -16,7 +18,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <div className={style.bgTexture} />
-        {children}
+        <div id="moon-root" />
+        <div id="moon-bar-overlay" />
+        <div className={style.page}>
+          <div className={style.left}>
+            <MoonBar />
+          </div>
+          <div className={style.content}>
+            <TitleHeader />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

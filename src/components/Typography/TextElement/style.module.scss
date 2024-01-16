@@ -1,0 +1,42 @@
+.isInline {
+  display: inline-block;
+}
+
+.sizeXxxl {
+  font-size: var(--font-size-xxxl);
+}
+
+.sizeXxl {
+  font-size: var(--font-size-xxl);
+}
+
+.sizeXl {
+  font-size: var(--font-size-xl);
+}
+
+.sizeL {
+  font-size: var(--font-size-l);
+}
+
+.sizeM {
+  font-size: var(--font-size-m);
+}
+
+.sizeS {
+  font-size: var(--font-size-s);
+}
+
+.sizeXs {
+  font-size: var(--font-size-xs);
+}
+
+.lineClamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.secondary {
+  color: var(--text-secondary);
+}

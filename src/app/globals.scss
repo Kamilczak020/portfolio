@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=Italiana&display=swap');
 
 html,
 body {
@@ -7,6 +7,8 @@ body {
   padding: 0;
   min-height: 100vh;
   background-color: #000;
+  color: white;
+  font-weight: 500;
 }
 
 html {
@@ -17,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-block: 0;
   margin-inline: 0;
   font-weight: unset;
-  font-family: 'Apfelgrotezk', sans-serif;
+  font-family: 'IBM Plex Mono', sans-serif;
 }
 
 h1 {
@@ -67,4 +69,25 @@ h6 {
   --spacing-m: 18px;
   --spacing-s: 9px;
   --spacing-xs: 4.5px;
+
+  --font-size-xxxl: 40px;
+  --font-size-xxl: 32px;
+  --font-size-xl: 24px;
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xs: 12px;
+  --font-size-xxs: 9px;
+
+  --line-height-xxxl: 48px;
+  --line-height-xxl: 36px;
+  --line-height-xl: 32px;
+  --line-height-l: 24px;
+  --line-height-m: 20px;
+  --line-height-s: 18px;
+  --line-height-xs: 16px;
+
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-regular: 400;
 }

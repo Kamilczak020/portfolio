@@ -5,4 +5,24 @@
   background-image: url('/cosmic-noise.png');
   background-repeat: repeat;
   opacity: 0.15;
+  z-index: 2;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: auto 1000px auto;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--spacing-l);
 }

@@ -9,12 +9,19 @@ const cx = classNames.bind(style);
 
 type MoonSquareProps = MoonProps & {
   squareClassName?: string;
+  wrapperClassName?: string;
 };
 
-export function MoonSquare({ squareClassName, ...moonProps }: MoonSquareProps): JSX.Element {
+export function MoonSquare({
+  squareClassName,
+  wrapperClassName,
+  ...moonProps
+}: MoonSquareProps): JSX.Element {
   return (
-    <div className={cx(style.moonSquare, squareClassName)}>
-      <Moon {...moonProps} rotation={moonProps.rotation - 45} />
+    <div className={cx(style.moonSquareWrapper, wrapperClassName)}>
+      <div className={cx(style.moonSquare, squareClassName)}>
+        <Moon {...moonProps} rotation={(moonProps.rotation || 0) - 45} />
+      </div>
     </div>
   );
 }
