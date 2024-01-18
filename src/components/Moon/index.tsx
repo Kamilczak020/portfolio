@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import React, { ComponentType } from 'react';
+import React, { ComponentType, Suspense } from 'react';
 import { mustExist } from '@penumbra/util/exists';
 import { motion } from 'framer-motion';
 import classnames from 'classnames/bind';
@@ -24,10 +24,13 @@ const moons: Map<number, ComponentType<any>> = new Map(
 
 export function Moon({ phase, rotation, className }: MoonProps): JSX.Element {
   const MoonComponent = mustExist(moons.get(phase));
+  const classNames = cx(style.moonContainer, className);
 
   return (
-    <motion.div className={cx(style.moonContainer, className)} animate={{ rotate: rotation }}>
-      <MoonComponent className={style.moon} />
-    </motion.div>
+    <Suspense fallback={<div className={classNames} />}>
+      <motion.div className={classNames} animate={{ rotate: rotation }}>
+        <MoonComponent className={style.moon} />
+      </motion.div>
+    </Suspense>
   );
 }

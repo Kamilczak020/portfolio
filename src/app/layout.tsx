@@ -2,7 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { MoonBar } from '@penumbra/components/MoonBar';
-import { TitleHeader } from '@penumbra/components/TitleHeader';
+import { TitleBar } from '@penumbra/components/TitleBar';
+import { NavBar } from '@penumbra/components/NavBar';
 import style from './layout.module.scss';
 import './globals.scss';
 
@@ -25,8 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <MoonBar />
           </div>
           <div className={style.content}>
-            <TitleHeader />
+            <TitleBar />
             {children}
+          </div>
+          <div className={style.right}>
+            <NavBar />
           </div>
         </div>
       </body>

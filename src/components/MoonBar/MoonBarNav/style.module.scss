@@ -7,7 +7,7 @@
   min-height: var(--square-diagonal);
   flex-direction: column;
   position: absolute;
-  left: calc(var(--sidebar-width) - var(--nav-icon-size) - (var(--icon-spacing) / 2));
+  left: calc(var(--sidebar-width) - var(--square-diagonal-half) - var(--nav-icon-size) - (var(--icon-spacing) / 2));
   top: calc(2px + (var(--square-diagonal) - (var(--nav-icon-size)) / 2));
 
   z-index: 3;
@@ -25,8 +25,12 @@
 .icon {
   width: var(--nav-icon-size);
   height: var(--nav-icon-size);
+}
+
+.iconWrapper {
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
   color: var(--border);
-  cursor: pointer;
 
   &:first-child {
     margin-right: auto;

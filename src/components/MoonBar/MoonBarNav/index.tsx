@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { Icon } from '@penumbra/components/Icon';
-import classnames from 'classnames';
+import { NavIcon } from '@penumbra/components/NavIcon';
 import style from './style.module.scss';
 
 export function MoonBarNav() {
@@ -15,12 +14,32 @@ export function MoonBarNav() {
   return createPortal(
     <div className={style.moonBarNav}>
       <div className={style.row}>
-        <Icon type="home" className={classnames(style.icon, style.home)} />
-        <Icon type="person" className={classnames(style.icon, style.person)} />
+        <NavIcon
+          path="/home"
+          type="home"
+          className={style.icon}
+          wrapperClassName={style.iconWrapper}
+        />
+        <NavIcon
+          path="/about-me"
+          type="person"
+          className={style.icon}
+          wrapperClassName={style.iconWrapper}
+        />
       </div>
       <div className={style.row}>
-        <Icon type="blog" className={classnames(style.icon, style.blog)} />
-        <Icon type="contact" className={classnames(style.icon, style.contact)} />
+        <NavIcon
+          path="/blog"
+          type="blog"
+          className={style.icon}
+          wrapperClassName={style.iconWrapper}
+        />
+        <NavIcon
+          path="/contact"
+          type="contact"
+          className={style.icon}
+          wrapperClassName={style.iconWrapper}
+        />
       </div>
     </div>,
     root,

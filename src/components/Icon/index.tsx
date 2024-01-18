@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import * as icons from './icons';
 import style from './style.module.scss';
 
-type IconType = keyof typeof icons;
+export type IconType = keyof typeof icons;
 
 export enum IconSize {
   XL = 'extraLarge',

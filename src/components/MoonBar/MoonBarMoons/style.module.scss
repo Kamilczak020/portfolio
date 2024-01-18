@@ -3,7 +3,7 @@
   flex-direction: column;
   position: absolute;
   height: calc(var(--square-diagonal) * 5);
-  left: calc(var(--sidebar-width) - (var(--moon-size) / 2));
+  left: calc(var(--sidebar-width) - var(--square-diagonal-half) - (var(--moon-size) / 2));
   top: calc((var(--square-diagonal) / 2) - (var(--moon-size) / 2));
   z-index: 5;
 }

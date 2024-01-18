@@ -1,5 +1,5 @@
-import React from 'react';
+import { redirect } from 'next/navigation';
 
-export default function Home(): JSX.Element {
-  return <div />;
+export default function RootPage() {
+  return redirect('/home');
 }
