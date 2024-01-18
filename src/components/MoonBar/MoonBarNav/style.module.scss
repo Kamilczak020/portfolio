@@ -1,0 +1,34 @@
+.moonBarNav {
+  --icon-spacing: 30px;
+
+  display: flex;
+  width: calc(var(--icon-spacing) + var(--nav-icon-size) * 2);
+  height: calc(var(--square-diagonal) + var(--nav-icon-size));
+  min-height: var(--square-diagonal);
+  flex-direction: column;
+  position: absolute;
+  left: calc(var(--sidebar-width) - var(--nav-icon-size) - (var(--icon-spacing) / 2));
+  top: calc(2px + (var(--square-diagonal) - (var(--nav-icon-size)) / 2));
+
+  z-index: 3;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  &:first-child {
+    margin-bottom: auto;
+  }
+}
+
+.icon {
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
+  color: var(--border);
+  cursor: pointer;
+
+  &:first-child {
+    margin-right: auto;
+  }
+}

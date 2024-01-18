@@ -53,6 +53,15 @@ h6 {
 }
 
 :root {
+  --square-size: 200px;
+  --content-width: 1200px;
+  --moon-size: calc(var(--square-size) / 2);
+  --nav-icon-size: calc(var(--square-size) / 2.3);
+  --nav-icon-diagonal: calc(var(--nav-icon-size) * sqrt(2));
+  --square-diagonal: calc(var(--square-size) * sqrt(2));
+  --square-diagonal-half: calc(var(--square-diagonal) / 2);
+  --sidebar-width: calc((100vw - var(--content-width)) / 2);
+
   --accent-purple: #2b324b;
   --accent-cream: #f7c59f;
   --gray-500: #767b91;

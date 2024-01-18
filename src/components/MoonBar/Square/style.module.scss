@@ -1,16 +1,13 @@
 .moonSquareWrapper {
-  --size: 150px;
-  --diagonal: calc(var(--size) * sqrt(2));
-
-  width: var(--diagonal);
-  height: var(--diagonal);
+  width: var(--square-diagonal);
+  height: var(--square-diagonal);
   display: flex;
   align-items: center;
   justify-content: center;
 
   & .moonSquare {
-    width: var(--size);
-    height: var(--size);
+    width: var(--square-size);
+    height: var(--square-size);
     display: flex;
     align-items: center;
     justify-content: center;
