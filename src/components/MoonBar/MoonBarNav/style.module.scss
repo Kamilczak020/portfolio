@@ -3,12 +3,12 @@
 
   display: flex;
   width: calc(var(--icon-spacing) + var(--nav-icon-size) * 2);
-  height: calc(var(--square-diagonal) + var(--nav-icon-size));
+  height: calc(2px + var(--square-diagonal) + var(--nav-icon-size));
   min-height: var(--square-diagonal);
   flex-direction: column;
   position: absolute;
   left: calc(var(--sidebar-width) - var(--square-diagonal-half) - var(--nav-icon-size) - (var(--icon-spacing) / 2));
-  top: calc(2px + (var(--square-diagonal) - (var(--nav-icon-size)) / 2));
+  top: calc(1px + (var(--square-diagonal) - (var(--nav-icon-size)) / 2));
 
   z-index: 3;
 }
@@ -30,7 +30,6 @@
 .iconWrapper {
   width: var(--nav-icon-size);
   height: var(--nav-icon-size);
-  color: var(--border);
 
   &:first-child {
     margin-right: auto;

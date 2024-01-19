@@ -5,12 +5,13 @@ import { createPortal } from 'react-dom';
 import { NavIcon } from '@penumbra/components/NavIcon';
 import style from './style.module.scss';
 
-export function MoonBarNav() {
+export default function MoonBarNav() {
   if (typeof window === 'undefined') {
     return null;
   }
 
-  const root = document.getElementById('moon-bar-overlay') || document.body;
+  const root = document?.getElementById('moon-bar-overlay') || document?.body;
+
   return createPortal(
     <div className={style.moonBarNav}>
       <div className={style.row}>

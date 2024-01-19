@@ -1,5 +1,7 @@
 .nav {
   display: block;
+  cursor: pointer;
+  color: var(--border);
 
   &.active {
     color: white;
