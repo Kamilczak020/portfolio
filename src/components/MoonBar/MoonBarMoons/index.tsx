@@ -4,6 +4,7 @@ import { Moon } from '@penumbra/components/Moon';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { usePathname } from 'next/navigation';
+import { useTicker } from '@penumbra/hooks/ticker';
 import style from './style.module.scss';
 
 export default function MoonBarMoons() {
@@ -12,12 +13,19 @@ export default function MoonBarMoons() {
   }
 
   const root = document?.getElementById('moon-bar-overlay') || document?.body;
-  const pathname = usePathname();
   const [rotation, setRotation] = useState(0);
+  const pathname = usePathname();
+
+  const degRotPerSec = 2;
+  const tickerTime = useTicker(500);
 
   useEffect(() => {
     setRotation((prev) => prev + 90);
   }, [pathname]);
+
+  useEffect(() => {
+    setRotation((prev) => prev + degRotPerSec / 2);
+  }, [tickerTime]);
 
   return createPortal(
     <div className={style.moons}>

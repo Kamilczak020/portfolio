@@ -28,7 +28,11 @@ export function Moon({ phase, rotation, className }: MoonProps): JSX.Element {
 
   return (
     <Suspense fallback={<div className={classNames} />}>
-      <motion.div className={classNames} animate={{ rotate: rotation }}>
+      <motion.div
+        className={classNames}
+        animate={{ rotate: rotation }}
+        transition={{ type: 'tween' }}
+      >
         <MoonComponent className={style.moon} />
       </motion.div>
     </Suspense>
