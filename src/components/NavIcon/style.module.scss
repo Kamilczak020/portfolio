@@ -1,7 +1,8 @@
 .nav {
-  display: block;
+  display: flex;
   cursor: pointer;
   color: var(--border);
+  text-decoration: none;
 
   &.active {
     color: white;

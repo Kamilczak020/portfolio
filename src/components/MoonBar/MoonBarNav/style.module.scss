@@ -10,7 +10,7 @@
   left: calc(var(--sidebar-width) - var(--square-diagonal-half) - var(--nav-icon-size) - (var(--icon-spacing) / 2));
   top: calc(1px + (var(--square-diagonal) - (var(--nav-icon-size)) / 2));
 
-  z-index: 3;
+  z-index: 5;
 }
 
 .row {
