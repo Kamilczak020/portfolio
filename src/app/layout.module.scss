@@ -4,6 +4,7 @@
   height: 100%;
   background-image: url('/cosmic-noise.png');
   background-repeat: repeat;
+  pointer-events: none;
   opacity: 0.15;
   z-index: 2;
 }
@@ -28,8 +29,14 @@
   display: flex;
 }
 
+.middle {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--spacing-xl-double);
+}
+
 .content {
   display: flex;
   flex-direction: column;
-  padding: 0 var(--spacing-l);
+  padding: var(--spacing-xl-double) 0;
 }

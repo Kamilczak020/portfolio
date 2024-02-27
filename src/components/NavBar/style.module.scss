@@ -6,17 +6,3 @@
   z-index: 4;
 }
 
-.link {
-  display: inline;
-  color: white;
-  text-decoration: none;
-  font-family: 'IBM Plex Mono';
-  font-weight: 500;
-  margin-right: var(--spacing-xl);
-  cursor: pointer;
-  transition: color 200ms linear;
-
-  &:hover, &.active {
-    color: var(--accent-cream);
-  }
-}

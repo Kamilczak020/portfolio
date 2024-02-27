@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { MoonBar } from '@penumbra/components/MoonBar';
 import { TitleBar } from '@penumbra/components/TitleBar';
@@ -8,11 +7,6 @@ import style from './layout.module.scss';
 import './globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Penumbra | Home',
-  description: 'Penumbra',
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,9 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className={style.left}>
             <MoonBar />
           </div>
-          <div className={style.content}>
+          <div className={style.middle}>
             <TitleBar />
-            {children}
+            <div className={style.content}>{children}</div>
           </div>
           <div className={style.right}>
             <NavBar />

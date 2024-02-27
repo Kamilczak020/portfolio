@@ -8,7 +8,7 @@ const nextConfig = {
 
     return config;
   },
-
+  pageExtensions: ['mdx', 'ts', 'tsx'],
   experimental: {
     turbo: {
       rules: {

@@ -3,6 +3,11 @@
   cursor: pointer;
   color: var(--border);
   text-decoration: none;
+  transition: all 200ms linear;
+    
+  &:hover:not(.active) {
+    color: var(--accent-cream);
+  }
 
   &.active {
     color: white;

@@ -1,0 +1,19 @@
+.link {
+  display: inline;
+  color: var(--gray-500);
+  text-decoration: none;
+  font-family: var(--content-font);
+  font-weight: 500;
+  padding: var(--spacing-s);
+  margin: 0 var(--spacing-s);
+  cursor: pointer;
+  transition: color 200ms linear;
+
+  &:hover {
+    color: var(--accent-cream);
+  }
+
+  &.active:not(:hover) {
+    color: white;
+  }
+}

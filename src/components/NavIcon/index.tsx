@@ -18,7 +18,11 @@ export function NavIcon({ path, wrapperClassName, ...iconProps }: NavIconProps) 
   const pathname = usePathname();
 
   return (
-    <Link href={path} className={cx(style.nav, wrapperClassName, { active: path === pathname })}>
+    <Link
+      href={path}
+      tabIndex={-1}
+      className={cx(style.nav, wrapperClassName, { active: path === pathname })}
+    >
       <Icon {...iconProps} />
     </Link>
   );

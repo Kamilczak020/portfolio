@@ -2,7 +2,14 @@ const prettierOptions = require('./.prettierrc.cjs');
 
 module.exports = {
   plugins: ['@typescript-eslint', 'eslint-comments', 'prettier'],
-  extends: ['airbnb', 'airbnb-typescript', 'plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/recommended-requiring-type-checking', 'prettier'],
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:mdx/recommended',
+    'prettier',
+  ],
   env: {
     node: true,
     browser: true,
@@ -13,8 +20,17 @@ module.exports = {
     project: './tsconfig.json',
     ecmaFeatures: {
       jsx: true
-    }
+    },
   },
+  overrides: [
+    {
+      files: "*.mdx",
+      extends: ["plugin:mdx/recommended"],
+      settings: {
+        "mdx/code-blocks": false,
+      },
+    },
+  ],
   rules: {
     'no-await-in-loop': 'off',
     // allows continue in for loops

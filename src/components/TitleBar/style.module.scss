@@ -11,7 +11,7 @@
 }
 
 .title {
-  font-family: "Italiana";
+  font-family: var(--title-font);
   font-size: var(--font-size);
   line-height: var(--font-size);
   font-weight: 500;

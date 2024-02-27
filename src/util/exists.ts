@@ -26,7 +26,7 @@ export function isNil<T>(value: Optional<T>): value is Nil {
  * @param {Array<any>} values
  * @returns {value is T}
  */
-export function exists<T>(value: T | null): value is T {
+export function exists<T>(value: T | Nil): value is T {
   return !isNil(value);
 }
 

@@ -1,27 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
-import classnames from 'classnames';
+import { NavItem } from '@penumbra/components/NavBar/NavItem';
 import style from './style.module.scss';
 
-type NavBarProps = {
-  className?: string;
-};
-
-export function NavBar({ className }: NavBarProps): JSX.Element {
+export function NavBar(): JSX.Element {
   return (
     <div className={style.navBar}>
-      <Link className={classnames(style.link, className)} href="/home">
-        Home
-      </Link>
-      <Link className={classnames(style.link, className)} href="/about-me">
-        Bio
-      </Link>
-      <Link className={classnames(style.link, className)} href="/blog">
-        Blog
-      </Link>
-      <Link className={classnames(style.link, className)} href="/contact">
-        Contact
-      </Link>
+      <NavItem path="/home" title="Home" />
+      <NavItem path="/about-me" title="Bio" />
+      <NavItem path="/blog" title="Blog" />
+      <NavItem path="/contact" title="Contact" />
     </div>
   );
 }

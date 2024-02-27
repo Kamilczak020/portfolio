@@ -1,0 +1,20 @@
+.menuItem {
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  margin-left: calc(var(--spacing-xs) * -1);
+  transition: all 200ms linear;
+  color: var(--gray-500);
+  font-family: var(--content-font);
+
+  &.active {
+    color: white;
+  }
+
+  &:hover:not(.active) {
+    color: var(--accent-cream);
+  }
+}
+
+.time {
+  margin-right: var(--spacing-xs);
+}

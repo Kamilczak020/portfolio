@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+
+.menu {
+  margin-top: var(--spacing-s);
+  display: flex;
+  flex-direction: column;
+}
