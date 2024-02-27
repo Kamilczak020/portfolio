@@ -18,7 +18,12 @@ export function NavItem({ className, path, title }: NavItemProps): JSX.Element {
   const pathname = usePathname();
 
   return (
-    <Link href={path} className={cx(style.link, className, { active: path === pathname })}>
+    <Link
+      href={path}
+      // eslint-disable-next-line
+      tabIndex={1}
+      className={cx(style.link, className, { active: path === pathname })}
+    >
       {title}
     </Link>
   );
