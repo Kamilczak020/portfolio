@@ -1,0 +1,8 @@
+.contact {
+  width: 75%;
+  margin-top: var(--spacing-s);
+
+  & .divider {
+    margin: var(--spacing-xl-double) 0 var(--spacing-xl);
+  }
+}

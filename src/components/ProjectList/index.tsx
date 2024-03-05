@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ProjectPage, ProjectPageData } from '@penumbra/components/ProjectList/ProjectPage';
+import { ProjectPage } from '@penumbra/components/ProjectList/ProjectPage';
 import { exists, mustExist } from '@penumbra/util/exists';
-import { FetchProjectsResult } from '@penumbra/actions/fetch-projects';
+import { FetchProjectsResult, ProjectData } from '@penumbra/actions/fetch-projects';
 import { ProjectMenuItem } from '@penumbra/components/ProjectList/ProjectMenuItem';
 import style from './style.module.scss';
 
 export function ProjectList({ projects }: FetchProjectsResult): JSX.Element {
-  const [activeProject, setActiveProject] = useState<ProjectPageData>();
+  const [activeProject, setActiveProject] = useState<ProjectData>();
   const pageRef = useRef<HTMLDivElement>(null);
 
   const handleClick = useCallback(

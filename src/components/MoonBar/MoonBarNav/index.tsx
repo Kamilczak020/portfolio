@@ -22,7 +22,7 @@ export default function MoonBarNav() {
           wrapperClassName={style.iconWrapper}
         />
         <NavIcon
-          path="/about-me"
+          path="/bio"
           type="person"
           className={style.icon}
           wrapperClassName={style.iconWrapper}

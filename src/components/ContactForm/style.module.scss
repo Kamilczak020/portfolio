@@ -1,8 +1,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 65%;
-
   color: var(--gray-500);
 }
 
@@ -11,6 +9,18 @@
   flex-direction: column;
   margin: var(--spacing-m) 0;
   font-family: var(--content-font);
+
+  & label {
+    @media only screen and (max-width: 1600px) {
+      font-size: var(--font-size-xs);
+      line-height: var(--line-height-xs);
+    }
+
+    @media only screen and (min-width: 1601px) {
+      font-size: var(--font-size-s);
+      line-height: var(--line-height-s);
+    }
+  }
 }
 
 .input {
@@ -21,6 +31,16 @@
   color: var(--gray-300);
   font-family: var(--content-font);
   outline: none;
+
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+  }
 }
 
 .textarea {
@@ -40,6 +60,7 @@
   color: var(--gray-500);
   cursor: pointer;
   transition: all 200ms linear;
+  font-family: var(--content-font);
 
   &:focus {
     border: 1px solid white;

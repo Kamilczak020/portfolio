@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Icon, IconProps } from '@penumbra/components/Icon';
+import { Icon, IconProps, IconSize } from '@penumbra/components/Icon';
 import classnames from 'classnames/bind';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -23,7 +23,7 @@ export function NavIcon({ path, wrapperClassName, ...iconProps }: NavIconProps) 
       tabIndex={-1}
       className={cx(style.nav, wrapperClassName, { active: path === pathname })}
     >
-      <Icon {...iconProps} />
+      <Icon {...iconProps} size={IconSize.Custom} />
     </Link>
   );
 }

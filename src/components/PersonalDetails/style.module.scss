@@ -1,0 +1,18 @@
+.details {
+  display: grid;
+  grid-template-columns: 200px auto;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+
+.key {
+  grid-column: 1 / 1;
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-xs);
+}
+
+.value {
+  grid-column: 2 / 2;
+  text-align: right;
+  margin-bottom: var(--spacing-xs);
+}

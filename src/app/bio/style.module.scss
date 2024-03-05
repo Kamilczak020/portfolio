@@ -1,0 +1,22 @@
+.bio {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: var(--spacing-xl-double);
+
+  & .link {
+    color: var(--gray-100);
+    padding: var(--spacing-m);
+    transition: color 200ms linear;
+
+    &:hover {
+      color: var(--accent-cream);
+    }
+  }
+}

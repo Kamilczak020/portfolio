@@ -1,7 +1,17 @@
 .navBar {
-  --font-size: 18px;
- 
+  @media only screen and (max-width: 1600px) {
+    --font-size: var(--font-size-s);
+    --line-height: var(--line-height-s);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    --font-size: var(--font-size-m);
+    --line-height: var(--line-height-m);
+  }
+
   flex-direction: row;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   margin-top: calc(var(--square-diagonal-half) - (var(--font-size) / 2));
   z-index: 4;
 }

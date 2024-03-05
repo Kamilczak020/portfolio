@@ -1,9 +1,15 @@
 import { cache } from 'react';
 import { exists } from '@penumbra/util/exists';
-import { ProjectPageData } from '@penumbra/components/ProjectList/ProjectPage';
+import { NumberRange } from '@penumbra/util/types';
+import { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 import { client } from '../../tina/__generated__/client';
 
-export type FetchProjectsResult = Awaited<ReturnType<typeof fetchProjects>>;
+export type ProjectData = {
+  id: string;
+  title: string;
+  time: NumberRange;
+  body?: TinaMarkdownContent;
+};
 
 async function fetchProjects() {
   const response = await client.queries.projectsConnection();
@@ -22,12 +28,19 @@ async function fetchProjects() {
         title: project.node.title,
         time: project.node.time,
         body: project.node.body,
-      } satisfies ProjectPageData;
+      } satisfies ProjectData;
     })
     .filter(exists)
-    .sort((a, b) => b.time.from - a.time.from) as Array<ProjectPageData>;
+    .sort((a, b) => {
+      if (b.time.to - a.time.to === 0) {
+        return b.time.from - a.time.from;
+      }
+
+      return b.time.to - a.time.to;
+    }) as Array<ProjectData>;
 
   return { projects: projects || [] };
 }
 
+export type FetchProjectsResult = Awaited<ReturnType<typeof fetchProjects>>;
 export const fetchAllProjects = cache(fetchProjects);

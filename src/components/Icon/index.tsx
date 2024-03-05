@@ -10,6 +10,7 @@ export enum IconSize {
   L = 'large',
   M = 'medium',
   S = 'small',
+  Custom = 'custom',
 }
 
 export interface IconProps extends HTMLAttributes<SVGElement> {

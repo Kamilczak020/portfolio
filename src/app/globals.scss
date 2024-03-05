@@ -5,6 +5,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  min-width: 768px;
   min-height: 100vh;
   background-color: #000;
   color: white;
@@ -23,39 +24,100 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--content-font);
 }
 
+::selection {
+  color: black;
+  background: var(--accent-cream);
+}
+
+span, p {
+  font-family: var(--content-font);
+
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-s);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-m);
+  }
+}
+
 h1 {
-  font-size: var(--font-size-xxxl);
-  line-height: var(--line-height-xxxl);
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-xxl);
+  }
+
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-xxxl);
+    line-height: var(--line-height-xxxl);
+  }
 }
 
 h2 {
-  font-size: var(--font-size-xxl);
-  line-height: var(--line-height-xxl);
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+  }
+
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-xxl);
+  }
 }
 
 h3 {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-xl);
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+  }
 }
 
 h4 {
-  font-size: var(--font-size-l);
-  line-height: var(--line-height-l);
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
+  }
 }
 
 h5 {
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-m);
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+  }
 }
 
 h6 {
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  @media only screen and (max-width: 1600px) {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+  }
+
+  @media only screen and (min-width: 1601px) {
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+  }
 }
 
 :root {
-  --square-size: 200px;
-  --content-width: 1200px;
+  --content-width: 55vw;
+  --square-size: clamp(100px, calc(100vh / 6.525), 400px);
   --moon-size: calc(var(--square-size) / 2);
   --nav-icon-size: calc(var(--square-size) / 2.3);
   --nav-icon-diagonal: calc(var(--nav-icon-size) * sqrt(2));
@@ -104,3 +166,4 @@ h6 {
   --font-weight-semibold: 600;
   --font-weight-regular: 400;
 }
+

@@ -26,8 +26,15 @@
 }
 
 .large {
-  width: 30px;
-  height: 30px;
+  @media only screen and (max-width: 1600px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media only screen and (min-width: 1601px) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .extraLarge {
