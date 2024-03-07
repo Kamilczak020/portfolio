@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=Italiana&display=swap');
-
 html,
 body {
   position: relative;
@@ -15,6 +13,55 @@ body {
 
 html {
   overflow: hidden;
+}
+
+body {
+  --content-width: 55vw;
+  --square-size: clamp(100px, calc(100vh / 6.525), 400px);
+  --moon-size: calc(var(--square-size) / 2);
+  --nav-icon-size: calc(var(--square-size) / 2.3);
+  --nav-icon-diagonal: calc(var(--nav-icon-size) * sqrt(2));
+  --square-diagonal: calc(var(--square-size) * sqrt(2));
+  --square-diagonal-half: calc(var(--square-diagonal) / 2);
+  --sidebar-width: calc((100vw - var(--content-width)) / 2);
+
+  --accent-purple: #2b324b;
+  --accent-cream: #f7c59f;
+  --gray-500: #767b91;
+  --gray-300: #c7ccdb;
+  --gray-100: #e1e5ee;
+  --border: #242424;
+  --bg: #000;
+
+  --spacing-xxl-double: 72px;
+  --spacing-xl-double: 54px;
+
+  --spacing-xl: 36px;
+  --spacing-l: 27px;
+  --spacing-m: 18px;
+  --spacing-s: 9px;
+  --spacing-xs: 4.5px;
+
+  --font-size-xxxl: 40px;
+  --font-size-xxl: 32px;
+  --font-size-xl: 24px;
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xs: 12px;
+  --font-size-xxs: 9px;
+
+  --line-height-xxxl: 48px;
+  --line-height-xxl: 36px;
+  --line-height-xl: 32px;
+  --line-height-l: 24px;
+  --line-height-m: 20px;
+  --line-height-s: 18px;
+  --line-height-xs: 16px;
+
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-regular: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -113,57 +160,5 @@ h6 {
     font-size: var(--font-size-s);
     line-height: var(--line-height-s);
   }
-}
-
-:root {
-  --content-width: 55vw;
-  --square-size: clamp(100px, calc(100vh / 6.525), 400px);
-  --moon-size: calc(var(--square-size) / 2);
-  --nav-icon-size: calc(var(--square-size) / 2.3);
-  --nav-icon-diagonal: calc(var(--nav-icon-size) * sqrt(2));
-  --square-diagonal: calc(var(--square-size) * sqrt(2));
-  --square-diagonal-half: calc(var(--square-diagonal) / 2);
-  --sidebar-width: calc((100vw - var(--content-width)) / 2);
-
-  --accent-purple: #2b324b;
-  --accent-cream: #f7c59f;
-  --gray-500: #767b91;
-  --gray-300: #c7ccdb;
-  --gray-100: #e1e5ee;
-  --border: #242424;
-  --bg: #000;
-
-  --spacing-xxl-double: 72px;
-  --spacing-xl-double: 54px;
-
-  --spacing-xl: 36px;
-  --spacing-l: 27px;
-  --spacing-m: 18px;
-  --spacing-s: 9px;
-  --spacing-xs: 4.5px;
-
-  --title-font: 'Italiana';
-  --content-font: 'IBM Plex Mono', sans-serif;
-
-  --font-size-xxxl: 40px;
-  --font-size-xxl: 32px;
-  --font-size-xl: 24px;
-  --font-size-l: 18px;
-  --font-size-m: 16px;
-  --font-size-s: 14px;
-  --font-size-xs: 12px;
-  --font-size-xxs: 9px;
-
-  --line-height-xxxl: 48px;
-  --line-height-xxl: 36px;
-  --line-height-xl: 32px;
-  --line-height-l: 24px;
-  --line-height-m: 20px;
-  --line-height-s: 18px;
-  --line-height-xs: 16px;
-
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-regular: 400;
 }
 

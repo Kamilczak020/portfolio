@@ -26,10 +26,8 @@
 }
 
 .title {
-  font-family: var(--title-font);
   font-size: var(--font-size-title);
   line-height: var(--font-size-title);
-  font-weight: 500;
 }
 
 .description {
@@ -40,12 +38,4 @@
 .nav {
   margin-left: auto;
   margin-top: calc((var(--font-size-title) / 2) - (var(--font-size) / 2));
-
-  // @media only screen and (max-width: 1300px) {
-  //   display: block;
-  // }
-  //
-  // @media only screen and (min-width: 1301px) {
-  //   display: none;
-  // }
 }
