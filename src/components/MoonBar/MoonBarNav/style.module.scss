@@ -1,7 +1,6 @@
 .moonBarNav {
   --icon-spacing: 30px;
 
-  display: flex;
   width: calc(var(--icon-spacing) + var(--nav-icon-size) * 2);
   height: calc(2px + var(--square-diagonal) + var(--nav-icon-size));
   min-height: var(--square-diagonal);
@@ -9,8 +8,16 @@
   position: absolute;
   left: clamp(calc((var(--square-diagonal) / 2) - var(--nav-icon-size) - (var(--icon-spacing) / 2)), calc(var(--sidebar-width) - var(--square-diagonal-half) - var(--nav-icon-size) - (var(--icon-spacing) / 2)), 3000px);
   top: calc(1px + (var(--square-diagonal) - (var(--nav-icon-size)) / 2));
-
   z-index: 5;
+
+  @media only screen and (max-width: 1300px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1301px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .row {

@@ -6,6 +6,15 @@
   left: clamp(calc((var(--square-diagonal) / 2) - (var(--moon-size) / 2)), calc(var(--sidebar-width) - var(--square-diagonal-half) - (var(--moon-size) / 2)), 3000px);
   top: calc((var(--square-diagonal) / 2) - (var(--moon-size) / 2));
   z-index: 3;
+
+  @media only screen and (max-width: 1300px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1301px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .moon {

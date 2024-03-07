@@ -6,7 +6,7 @@ import style from './style.module.scss';
 const MoonBarNav = dynamic(() => import('./MoonBarNav'), { ssr: false });
 const MoonBarMoons = dynamic(() => import('./MoonBarMoons'), { ssr: false });
 
-export function MoonBar(): JSX.Element {
+export function MoonBar() {
   return (
     <div className={style.moonBar}>
       <Square wrapperClassName={style.wrapper} squareClassName={style.square} />

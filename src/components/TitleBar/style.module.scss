@@ -1,13 +1,22 @@
 .titleBar {
+  display: flex;
+  flex-direction: row;
+  padding: 0 80px;
+
   @media only screen and (max-width: 1600px) {
-    --font-size: 40px;
+    --font-size-title: 40px;
   }
 
   @media only screen and (min-width: 1601px) {
-    --font-size: 50px;
+    --font-size-title: 50px;
   }
 
-  margin-top: calc(var(--square-diagonal-half) - (var(--font-size) / 2));
+  margin-top: calc(var(--square-diagonal-half) - (var(--font-size-title) / 2));
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .row {
@@ -18,12 +27,25 @@
 
 .title {
   font-family: var(--title-font);
-  font-size: var(--font-size);
-  line-height: var(--font-size);
+  font-size: var(--font-size-title);
+  line-height: var(--font-size-title);
   font-weight: 500;
 }
 
 .description {
   margin-top: var(--spacing-m);
   color: var(--gray-100);
+}
+
+.nav {
+  margin-left: auto;
+  margin-top: calc((var(--font-size-title) / 2) - (var(--font-size) / 2));
+
+  // @media only screen and (max-width: 1300px) {
+  //   display: block;
+  // }
+  //
+  // @media only screen and (min-width: 1301px) {
+  //   display: none;
+  // }
 }
