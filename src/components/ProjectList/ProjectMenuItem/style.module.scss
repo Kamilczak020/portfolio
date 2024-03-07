@@ -5,6 +5,8 @@
   transition: all 200ms linear;
   color: var(--gray-500);
   font-family: var(--content-font);
+  text-decoration: none;
+  padding-left: 1px;
 
   &.active {
     color: white;

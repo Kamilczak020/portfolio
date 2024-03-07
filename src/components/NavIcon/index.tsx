@@ -19,9 +19,11 @@ export function NavIcon({ path, wrapperClassName, ...iconProps }: NavIconProps) 
 
   return (
     <Link
-      href={path}
+      href={path === '/home' ? '/home/brevy-support' : path}
       tabIndex={-1}
-      className={cx(style.nav, wrapperClassName, { active: path === pathname })}
+      className={cx(style.nav, wrapperClassName, {
+        active: pathname.startsWith(path),
+      })}
       aria-label={`${path} link`}
     >
       <Icon {...iconProps} size={IconSize.Custom} />

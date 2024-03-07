@@ -9,11 +9,11 @@
   cursor: pointer;
   transition: color 200ms linear;
 
-  &:hover {
+  &:hover:not(.active) {
     color: var(--accent-cream);
   }
 
-  &.active:not(:hover) {
+  &.active {
     color: white;
   }
 }

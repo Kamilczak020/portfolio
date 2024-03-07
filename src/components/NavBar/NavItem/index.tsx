@@ -23,7 +23,7 @@ export function NavItem({ className, path, title }: NavItemProps): JSX.Element {
       // eslint-disable-next-line
       tabIndex={1}
       aria-label={`${path} link`}
-      className={cx(style.link, className, { active: path === pathname })}
+      className={cx(style.link, className, { active: pathname.startsWith(path) })}
     >
       {title}
     </Link>

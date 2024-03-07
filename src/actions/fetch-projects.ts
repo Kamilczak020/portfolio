@@ -7,6 +7,7 @@ import { client } from '../../tina/__generated__/client';
 export type ProjectData = {
   id: string;
   title: string;
+  slug: string;
   time: NumberRange;
   body?: TinaMarkdownContent;
 };
@@ -26,6 +27,7 @@ async function fetchProjects() {
       return {
         id: project.node.id,
         title: project.node.title,
+        slug: project.node._sys.filename,
         time: project.node.time,
         body: project.node.body,
       } satisfies ProjectData;
@@ -40,6 +42,21 @@ async function fetchProjects() {
     }) as Array<ProjectData>;
 
   return { projects: projects || [] };
+}
+
+export async function fetchProject(slug: string): Promise<ProjectData | null> {
+  const response = await client.queries.projects({ relativePath: `${slug}.mdx` });
+  if (exists(response.errors)) {
+    return null;
+  }
+
+  return {
+    id: response.data.projects.id,
+    title: response.data.projects.title,
+    slug: response.data.projects._sys.filename,
+    time: response.data.projects.time,
+    body: response.data.projects.body,
+  } satisfies ProjectData;
 }
 
 export type FetchProjectsResult = Awaited<ReturnType<typeof fetchProjects>>;

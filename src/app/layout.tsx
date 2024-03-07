@@ -1,7 +1,7 @@
 import React from 'react';
 import { MoonBar } from '@penumbra/components/MoonBar';
 import { TitleBar } from '@penumbra/components/TitleBar';
-import { ibm } from './fonts';
+import { ibm } from '@penumbra/app/fonts';
 import style from './layout.module.scss';
 import './globals.scss';
 
