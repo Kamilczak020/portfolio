@@ -22,6 +22,7 @@ export function NavIcon({ path, wrapperClassName, ...iconProps }: NavIconProps) 
       href={path}
       tabIndex={-1}
       className={cx(style.nav, wrapperClassName, { active: path === pathname })}
+      aria-label={`${path} link`}
     >
       <Icon {...iconProps} size={IconSize.Custom} />
     </Link>

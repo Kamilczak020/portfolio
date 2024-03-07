@@ -16,15 +16,15 @@ export default function MoonBarMoons() {
   const [rotation, setRotation] = useState(0);
   const pathname = usePathname();
 
-  const degRotPerSec = 2;
-  const tickerTime = useTicker(500);
+  const degRot = 10;
+  const tickerTime = useTicker(10);
 
   useEffect(() => {
     setRotation((prev) => prev + 90);
   }, [pathname]);
 
   useEffect(() => {
-    setRotation((prev) => prev + degRotPerSec / 2);
+    setRotation((prev) => prev + degRot);
   }, [tickerTime]);
 
   return createPortal(
