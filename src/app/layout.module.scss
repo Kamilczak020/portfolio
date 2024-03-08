@@ -50,7 +50,7 @@
 .middle {
   display: flex;
   flex-direction: column;
-  padding: 0 80px;
+  padding: 0 clamp(5px, calc(100vw / 20), 80px);
   grid-column: 2/4;
 }
 

@@ -2,7 +2,16 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 0 80px;
+  padding: 0 clamp(5px, calc(100vw / 20), 80px);
+
+
+  @media only screen and (max-width: 1300px) {
+    margin-top: clamp(5px, calc(100vw / 20), 80px);
+  }
+
+  @media only screen and (min-width: 1301px) {
+    margin-top: calc(var(--square-diagonal-half) - (var(--font-size-title) / 2));
+  }
 
   @media only screen and (max-width: 1600px) {
     --font-size-title: 40px;
@@ -12,7 +21,6 @@
     --font-size-title: 50px;
   }
 
-  margin-top: calc(var(--square-diagonal-half) - (var(--font-size-title) / 2));
 }
 
 .titleWrapper {
