@@ -37,7 +37,7 @@ async function fetchArticles() {
   return { articles: articles || [] };
 }
 
-export async function fetchBio(): Promise<ArticleData | null> {
+async function fetchUserBio(): Promise<ArticleData | null> {
   const response = await client.queries.articles({ relativePath: 'bio.mdx' });
   if (exists(response.errors)) {
     return null;
@@ -53,3 +53,4 @@ export async function fetchBio(): Promise<ArticleData | null> {
 
 export type FetchArticlesResult = Awaited<ReturnType<typeof fetchArticles>>;
 export const fetchAllArticles = cache(fetchArticles);
+export const fetchBio = cache(fetchUserBio);
