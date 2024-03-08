@@ -13,6 +13,7 @@ declare module '@penumbra/app/bio/page.mdx' {
 declare module '*.mdx' {
   export const metadata: {
     title: string;
+    display: string;
     slug: string;
     time: {
       from: number;

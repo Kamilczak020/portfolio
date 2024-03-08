@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 export type ProjectMetadata = {
   title: string;
+  display: string;
   slug: string;
   time: NumberRange;
 };

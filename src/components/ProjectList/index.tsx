@@ -1,17 +1,18 @@
+'use client';
+
 import React from 'react';
 import { ProjectMenuItem } from '@penumbra/components/ProjectList/ProjectMenuItem';
 import { projects } from '@penumbra/app/home/projects';
+import { usePathname } from 'next/navigation';
 import style from './style.module.scss';
 
-type ProjectListProps = {
-  path?: string;
-};
+export function ProjectList(): JSX.Element {
+  const path = usePathname().split('/').pop();
 
-export function ProjectList({ path }: ProjectListProps): JSX.Element {
   const menuItems = projects.map((project) => (
     <ProjectMenuItem
       key={project.slug}
-      title={project.title}
+      title={project.display}
       slug={project.slug}
       time={project.time}
       active={path === project.slug}
