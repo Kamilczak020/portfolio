@@ -9,9 +9,13 @@
     --line-height: var(--line-height-m);
   }
 
+  display: flex;
   flex-direction: row;
   font-size: var(--font-size);
   line-height: var(--line-height);
   z-index: 4;
 }
 
+.links {
+  display: flex;
+}
