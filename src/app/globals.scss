@@ -5,6 +5,7 @@ body {
   padding: 0;
   min-width: 768px;
   min-height: 100vh;
+  max-height: 100vh;
   background-color: #000;
   color: white;
   font-weight: 500;
@@ -17,6 +18,7 @@ html {
 
 body {
   --content-width: 55vw;
+
   --square-size: clamp(100px, calc(100vh / 6.525), 400px);
   --moon-size: calc(var(--square-size) / 2);
   --nav-icon-size: calc(var(--square-size) / 2.3);
@@ -81,10 +83,12 @@ span, p {
 
   @media only screen and (max-width: 1600px) {
     font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
   }
 
   @media only screen and (min-width: 1601px) {
     font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
   }
 }
 
