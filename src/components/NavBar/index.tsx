@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { NavItem } from '@penumbra/components/NavBar/NavItem';
 import classnames from 'classnames';

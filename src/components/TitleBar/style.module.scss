@@ -1,9 +1,9 @@
 .titleBar {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 0 clamp(5px, calc(100vw / 20), 80px);
-
+  margin: 0 clamp(5px, calc(100vw / 20), 80px);
 
   @media only screen and (max-width: 1300px) {
     margin-top: clamp(5px, calc(100vw / 20), 80px);
@@ -26,6 +26,7 @@
 .titleWrapper {
   height: 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
@@ -36,6 +37,7 @@
 }
 
 .title {
+  display: flex;
   font-size: var(--font-size-title);
   line-height: var(--font-size-title);
 }
@@ -48,4 +50,18 @@
 .nav {
   margin-left: auto;
   margin-top: calc((var(--font-size-title) / 2) - (var(--font-size)));
+}
+
+.burger {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+  }
+
+  @media only screen and (min-width: 769px) {
+    display: none;
+  }
 }
