@@ -21,6 +21,7 @@
 .moon {
   width: var(--moon-size);
   height: var(--moon-size);
-  margin-bottom: calc(var(--square-diagonal) - var(--moon-size));
+  margin-bottom: calc(var(--square-diagonal) - var(--moon-size) - 3px);
   filter: brightness(80%);
 }
+

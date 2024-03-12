@@ -1,16 +1,16 @@
 .titleBar {
-  position: relative;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  margin: 0 clamp(5px, calc(100vw / 20), 80px);
+  flex-direction: column;
 
-  @media only screen and (max-width: 1300px) {
-    margin-top: clamp(5px, calc(100vw / 20), 80px);
+  @media only screen and (max-width: 768px) {
+    background-color: black;
+    z-index: 4;
+    padding-bottom: clamp(5px, calc(100vw / 20), 80px);
   }
 
-  @media only screen and (min-width: 1301px) {
-    margin-top: calc(var(--square-diagonal-half) - (var(--font-size-title) / 2));
+  @media only screen and (min-width: 769px) {
+    background: transparent;
   }
 
   @media only screen and (max-width: 1600px) {
@@ -20,14 +20,29 @@
   @media only screen and (min-width: 1601px) {
     --font-size-title: 50px;
   }
-
 }
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 clamp(5px, calc(100vw / 20), 80px);
+
+  @media only screen and (max-width: 1300px) {
+    margin-top: clamp(5px, calc(100vw / 20), 80px);
+  }
+
+  @media only screen and (min-width: 1301px) {
+    margin-top: calc(var(--square-diagonal-half) - (var(--font-size-title) / 2));
+  }
+}
+
 
 .titleWrapper {
   height: 100%;
   display: flex;
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
 .row {
@@ -47,21 +62,63 @@
   color: var(--gray-100);
 }
 
+.navWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .nav {
   margin-left: auto;
-  margin-top: calc((var(--font-size-title) / 2) - (var(--font-size)));
 }
 
 .burger {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-
   @media only screen and (max-width: 768px) {
     display: flex;
   }
 
   @media only screen and (min-width: 769px) {
     display: none;
+  }
+}
+
+.links {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: black;
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--border);
+
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 769px) {
+    display: none;
+  }
+}
+
+.link {
+  border-bottom: 1px dashed var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.home {
+  cursor: pointer;
+  user-select: none;
+}
+
+.menuItem {
+  padding: var(--spacing-s) 0 !important;
+  
+  &:last-child {
+    margin-bottom: var(--spacing-xs);
   }
 }

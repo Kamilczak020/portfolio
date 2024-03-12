@@ -8,3 +8,4 @@ export const x = dynamic(() => import('./x.svg'));
 export const linkedin = dynamic(() => import('./linkedin.svg'));
 export const github = dynamic(() => import('./github.svg'));
 export const gitlab = dynamic(() => import('./gitlab.svg'));
+export const triangle = dynamic(() => import('./triangle.svg'));

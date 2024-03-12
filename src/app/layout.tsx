@@ -9,13 +9,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={ibm.className}>
-        <div className={style.bgTexture} />
         <div id="moon-root" />
         <div id="moon-bar-overlay" />
         <div className={style.page}>
           <div className={style.title}>
             <TitleBar />
           </div>
+          <div className={style.bgTexture} />
           <div className={style.left}>
             <MoonBar />
           </div>
