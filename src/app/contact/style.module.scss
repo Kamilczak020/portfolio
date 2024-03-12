@@ -33,8 +33,6 @@
 .contact {
   margin-top: var(--spacing-s);
   width: 100%;
-  height: 70vh;
-  overflow-y: scroll;
   padding-right: var(--spacing-m);
 
   &:hover {
@@ -50,16 +48,26 @@
   --scroll-size: 8px;
   --scroll-radius: 0px;
 
-  @include scroll-style(
-      $size: var(--scroll-size, 10px),
+  @media only screen and (max-width: 768px) {
+    overflow-y: unset;
+    max-height: unset;
+  }
 
-      $thumb:  var(--scroll-thumb, none),
-      $thumb-color: var(--scroll-thumb-color, grey),
-      $thumb-radius: var(--scroll-thumb-radius, var(--scroll-radius)),
-    
-      $track-color: var(--scroll-track, transparent),
-      $track-radius: var(--scroll-track-radius, var(--scroll-radius)),
-    );
+  @media only screen and (min-width: 769px) {
+    overflow-y: scroll;
+    max-height: 70vh;
+  }
+
+  @include scroll-style(
+    $size: var(--scroll-size, 10px),
+
+    $thumb:  var(--scroll-thumb, none),
+    $thumb-color: var(--scroll-thumb-color, grey),
+    $thumb-radius: var(--scroll-thumb-radius, var(--scroll-radius)),
+  
+    $track-color: var(--scroll-track, transparent),
+    $track-radius: var(--scroll-track-radius, var(--scroll-radius)),
+  );
 
   & .divider {
     margin: var(--spacing-xl-double) 0 var(--spacing-xl);
